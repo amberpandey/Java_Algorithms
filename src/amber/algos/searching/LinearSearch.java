@@ -7,25 +7,36 @@ package amber.algos.searching;
 /**
  * @author Amber
  *         <p>
- *         Unsorted Linear Search and Sorted/Ordered Linear Search. 
+ *         Unsorted Linear Search and Sorted/Ordered Linear Search.
  */
 public class LinearSearch {
 	/**
-	 * Linear Search on unsorted Array of numbers
 	 * <p>
-	 * Linear search is a very simple search algorithm. 
-	 * In this type of search, a sequential search is made over all items one by one. 
-	 * Every item is checked and if a match is found then that particular item is returned, 
-	 * otherwise the search continues till the end of the data collection.
+	 * <b>Linear Search on unsorted Array of numbers</b></br>
 	 * </p>
 	 * <p>
-	 * Complexities:-
-	 *     1. Time Complexity of linear search in worst case will be O(n). 
-     *     2. Space Complexity :- O(1)
-     * </p>
-	 * @param arrayOfNumbers Target list of numbers where we want to search particular number
-	 * @param noToSearch number we are looking to search in given list.
-	 * @return
+	 * <b>Points :- </b></br>
+	 * Linear search is a very simple search algorithm. </br>
+	 * In this type of search, a sequential search is made over all items one by
+	 * one. </br>
+	 * Every item is checked and if a match is found then that particular item
+	 * is returned,</br>
+	 * otherwise the search continues till the end of the data collection.</br>
+	 * </p>
+	 * <p>
+	 * <b>Complexities:- </b></br>
+	 * <font color = "blue"> <b>1. Time Complexity of linear search in worst
+	 * case : </b> O(n). </br>
+	 * <b> 2. Space Complexity :- </b> O(1) </br>
+	 * </font>
+	 * </p>
+	 * 
+	 * @param arrayOfNumbers
+	 *            Target list of numbers where we want to search particular
+	 *            number
+	 * @param noToSearch
+	 *            number we are looking to search in given list.
+	 * @return -1 if search failure else index of number in array.
 	 */
 	public static int unsortedLinearSearch(int arrayOfNumbers[], int noToSearch) {
 		for (int i = 0; i <= arrayOfNumbers.length; i++) {
@@ -37,21 +48,31 @@ public class LinearSearch {
 	}
 
 	/**
-	 * Linear Search on sorted Array of numbers
-	 * search fails as soon as any number becomes greater than the number to besearch in array.
+	 * <b>Linear Search on sorted Array of numbers</b></br>
+	 * search fails as soon as any number becomes greater than the number to be
+	 * search in array.
 	 * <p>
-	 * Linear search is a very simple search algorithm. 
-	 * In this type of search, a sequential search is made over all items one by one. 
-	 * Every item is checked and if a match is found then that particular item is returned, 
-	 * otherwise the search continues till the end of the data collection.
+	 * <b>Points :- </b></br>
+	 * Linear search is a very simple search algorithm. </br>
+	 * In this type of search, a sequential search is made over all items one by
+	 * one. </br>
+	 * Every item is checked and if a match is found then that particular item
+	 * is returned,</br>
+	 * otherwise the search continues till the end of the data collection.</br>
 	 * </p>
 	 * <p>
-	 * Complexities:-
-	 *     1. Time Complexity of linear search in worst case will be O(n). 
-     *     2. Space Complexity :- O(1)
-     * </p>
-	 * @param arrayOfNumbers Target list of numbers where we want to search particular number
-	 * @param noToSearch number we are looking to search in given list.
+	 * <b>Complexities:- </b></br>
+	 * <font color = "blue"> <b>1. Time Complexity of linear search in worst
+	 * case : </b> O(n). </br>
+	 * <b> 2. Space Complexity :- </b> O(1) </br>
+	 * </font>
+	 * </p>
+	 * 
+	 * @param arrayOfNumbers
+	 *            Target list of numbers where we want to search particular
+	 *            number
+	 * @param noToSearch
+	 *            number we are looking to search in given list.
 	 * @return -1 if search failure else index of number in array.
 	 */
 	public static int sortedLinearSearch(int arrayOfNumbers[], int noToSearch) {
