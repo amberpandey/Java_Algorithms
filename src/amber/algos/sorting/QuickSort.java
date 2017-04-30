@@ -4,6 +4,8 @@
  */
 package amber.algos.sorting;
 
+import amber.algos.searching.SearchTest;
+
 /**
  * @author Amber
  *
@@ -67,7 +69,7 @@ public class QuickSort {
 	}
 
 	/**
-	 * 
+	 * partition implementation 
 	 * @param arrayToSort
 	 * @param low
 	 * @param high
@@ -82,19 +84,19 @@ public class QuickSort {
 			if (arrayToSort[j] <= pivot) {
 				i++;
 
-				// swap arr[i] and arr[j]
+				// swap arr[i] and arr[j] if arr[j] i less or equal to pivot to have all number lesser than pivot on left side
 				int temp = arrayToSort[i];
 				arrayToSort[i] = arrayToSort[j];
 				arrayToSort[j] = temp;
 			}
 		}
 
-		// swap arr[i+1] and arr[high] (or pivot)
+		// swap arr[i+1] and arr[high] (or pivot) to move pivot in between less and greater values
 		int temp = arrayToSort[i + 1];
 		arrayToSort[i + 1] = arrayToSort[high];
 		arrayToSort[high] = temp;
-
 		return i + 1;
 	}
+	
 
 }
