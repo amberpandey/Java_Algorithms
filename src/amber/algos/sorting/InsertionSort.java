@@ -41,7 +41,7 @@ public class InsertionSort {
 		for (int i = 0; i < arrayToSort.length; i++) {
 			int j = i - 1;
 			int comparisonKey = arrayToSort[i];
-			// Iterating the sorted sub array
+			// Iterating the sorted sub array and moving greater number to insert smaller value
 			while (j >= 0 && arrayToSort[j] > comparisonKey) {
 				arrayToSort[i] = arrayToSort[j];
 				j = j - 1;
