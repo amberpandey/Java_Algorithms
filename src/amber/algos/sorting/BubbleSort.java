@@ -43,13 +43,13 @@ public class BubbleSort {
 		for (int i = 0; i < arrayToSort.length; i++) {
 			boolean swapped = false;
 			//Second loop starting from second element of list
-			for (int j = i + 1; j < arrayToSort.length; j++) {
+			for (int j = 0; j < arrayToSort.length-i-1; j++) {
 				//compare adjacent numbers
-				if (arrayToSort[j] < arrayToSort[i]) {
+				if (arrayToSort[j] > arrayToSort[j+1]) {
 					//Swap if right side is smaller
-					int tempMinNum = arrayToSort[j];
-					arrayToSort[j] = arrayToSort[i];
-					arrayToSort[i] = tempMinNum;
+					int tempMinNum = arrayToSort[j+1];
+					arrayToSort[j+1] = arrayToSort[j];
+					arrayToSort[j] = tempMinNum;
 					//setting swap flag to true even if one number get swapped
 					swapped = true;
 				}

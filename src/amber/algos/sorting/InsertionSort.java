@@ -46,7 +46,7 @@ public class InsertionSort {
 				arrayToSort[i] = arrayToSort[j];
 				j = j - 1;
 			}
-			arrayToSort[i] = comparisonKey;
+			arrayToSort[j+1] = comparisonKey;
 		}
 		return arrayToSort;
 	}

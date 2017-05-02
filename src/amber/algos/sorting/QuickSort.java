@@ -1,10 +1,9 @@
 /*
  * General Algorithms in Java
+ * QuickSort.java
  *
  */
 package amber.algos.sorting;
-
-import amber.algos.searching.SearchTest;
 
 /**
  * @author Amber
