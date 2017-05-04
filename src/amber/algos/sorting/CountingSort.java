@@ -1,12 +1,12 @@
 /*
  * General Algorithms in Java
- *
+ * ContingSort.java
  */
 package amber.algos.sorting;
 
 /**
  * @author Amber
- *
+ * Implementation of counting sort.
  */
 public class CountingSort {
 	/**
