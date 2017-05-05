@@ -4,9 +4,10 @@
  */
 package amber.algos.sorting;
 
+import java.util.Arrays;
+
 /**
- * @author Amber
- * Implementation of counting sort.
+ * @author Amber Implementation of counting sort.
  */
 public class CountingSort {
 	/**
@@ -29,7 +30,8 @@ public class CountingSort {
 	 * <p>
 	 * <b>Complexities :-</b></br>
 	 * <font color = "blue"> <b>Time Complexity :</b> </br>
-	 * Worst Case : O(n+k) where n is the number of elements in input array and k is the range of input.</br>
+	 * Worst Case : O(n+k) where n is the number of elements in input array and
+	 * k is the range of input.</br>
 	 * Best Case : O(n+k)</br>
 	 * Average Case : O(n+k)</br>
 	 * <b>Space Complexity :</b> O(n+k)</br>
@@ -43,21 +45,45 @@ public class CountingSort {
 	public static int[] doCountSort(int[] arrayToSort) {
 		int length = arrayToSort.length;
 		int assumedRange = 100;
-		int countArray[] = new int[100];
+		int countArray[] = new int[assumedRange];
 		int outputArray[] = new int[length];
 		for (int j = 0; j < length; j++) {
 			countArray[arrayToSort[j]]++;
 		}
 		for (int i = 1; i < assumedRange; i++) {
-			if (i > 0) {
-				countArray[i] = countArray[i] + countArray[i - 1];
-			}
+			countArray[i] = countArray[i] + countArray[i - 1];
 		}
 		for (int i = 0; i < length; ++i) {
 			outputArray[countArray[arrayToSort[i]] - 1] = arrayToSort[i];
 			--countArray[arrayToSort[i]];
 		}
 
+		return outputArray;
+	}
+
+	/**
+	 * 
+	 * @param arrayToSort
+	 * @param exp
+	 * @return
+	 */
+	public static int[] doCountSortForRadixSort(int[] arrayToSort, int exp) {
+		int length = arrayToSort.length;
+		int assumedRange = 100;
+		int countArray[] = new int[assumedRange];
+		int outputArray[] = new int[length];
+		Arrays.fill(countArray, 0);
+
+		for (int i = 0; i < length; i++) {
+			countArray[(arrayToSort[i] / exp) % 10]++;
+		}
+		for (int j = 1; j < assumedRange; j++) {
+			countArray[j] =countArray[j] + countArray[j - 1];
+		}
+		for (int j = length-1; j >= 0; j--) {
+			outputArray[countArray[(arrayToSort[j]/exp)%10] - 1] = arrayToSort[j];
+			--countArray[(arrayToSort[j]/exp)%10];
+		}
 		return outputArray;
 	}
 
