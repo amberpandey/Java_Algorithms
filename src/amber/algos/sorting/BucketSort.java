@@ -10,7 +10,7 @@ import amber.algos.utils.MaxNMinNum;
 
 /**
  * @author Amber
- *
+ * Implementation of Bucket Sort
  */
 public class BucketSort {
 	/**
